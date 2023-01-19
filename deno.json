@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "web:dev": "deno run -A npm:vite serve web/",
+    "web:build": "deno run -A npm:vite build web/",
+    "web:preview": "deno run -A npm:vite preview web/",
+    "web:serve": "deno run -A https://deno.land/std@0.157.0/http/file_server.ts web/dist/",
+
+    "server:start": "deno run -A ./server/main.ts"
+  },
+  "importMap": "./import_map.json",
+  "compilerOptions": {
+    "lib": ["dom", "deno.window"],
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client"]
+  }
+}
